@@ -9,13 +9,18 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
-class PatrickController
+class PatrickController extends Controller
 {
-    public function display()
+    /**
+     * @Route("/patrick/display/{toto}")
+     */
+    public function display($toto)
     {
-        $html = "<html><body><h1>Salut Patrick ! </h1></body></html>";
-        return new Response($html);
+        return $this->render('patrick/display.html.twig',
+            array('prenom' => 'Jean-Patrick'));
     }
 }

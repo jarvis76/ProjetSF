@@ -2,6 +2,6 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-route_a_patrick:
-  path: /patrick/display
-  controller: App\Controller\PatrickController::display
+#route_a_patrick:
+#  path: /patrick/display
+#  controller: App\Controller\PatrickController::display
