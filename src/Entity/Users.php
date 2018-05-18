@@ -31,6 +31,16 @@ class Users
      */
     private $useBristhDate;
 
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    private $Name;
+
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    private $name;
+
     public function getId()
     {
         return $this->id;
@@ -68,6 +78,18 @@ class Users
     public function setUseBristhDate(\DateTimeInterface $useBristhDate): self
     {
         $this->useBristhDate = $useBristhDate;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->Name;
+    }
+
+    public function setName(string $Name): self
+    {
+        $this->Name = $Name;
 
         return $this;
     }
